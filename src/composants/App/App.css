@@ -15,3 +15,8 @@
     width: 100vw;
     flex-direction: column;
 }
+
+.keyboard {
+    width: 60%;
+    background-color: whitesmoke;
+}

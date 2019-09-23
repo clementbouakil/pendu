@@ -6,35 +6,6 @@ import GuessCount from "../GuessCount/GuessCount";
 
 const autoBind = require("auto-bind");
 
-const letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z"
-];
-
 class App extends Component {
     constructor() {
         super();
@@ -50,11 +21,7 @@ class App extends Component {
             <div className="container flex-centered">
                 <h1>Jeu du pendu</h1>
                 <GuessCount guesses={guesses} />
-                <div className="flex-centered">
-                    {letters.map((letter, index) => (
-                        <Keyboard key={index} value={letter} />
-                    ))}
-                </div>
+                <Keyboard />
             </div>
         );
     }
