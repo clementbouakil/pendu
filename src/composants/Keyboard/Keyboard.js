@@ -2,38 +2,9 @@ import React from "react";
 
 import Key from "./Key";
 
-const letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z"
-];
-
-const Keyboard = () => (
+const Keyboard = ({ array }) => (
     <div className="keyboard p-4 border">
-        {letters.map((letter, index) => (
+        {array.map((letter, index) => (
             <Key key={index} value={letter} />
         ))}
     </div>
