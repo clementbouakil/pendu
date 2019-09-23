@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./App.css";
 import Keyboard from "../Keyboard/Keyboard";
+import GuessCount from "../GuessCount/GuessCount";
 
 const autoBind = require("auto-bind");
 
@@ -38,13 +39,18 @@ class App extends Component {
     constructor() {
         super();
         autoBind(this);
+        this.state = {
+            guesses: 0
+        };
     }
 
     render() {
+        const { guesses } = this.state;
         return (
             <div className="container flex-centered">
                 <h1>Jeu du pendu</h1>
-                <div className="container-keyboard flex-centered">
+                <GuessCount guesses={guesses} />
+                <div className="flex-centered">
                     {letters.map((letter, index) => (
                         <Keyboard key={index} value={letter} />
                     ))}
